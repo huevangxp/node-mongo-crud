@@ -1,5 +1,6 @@
+const controller = require('../controllers/loginController')
+
 module.exports = (app) => {
-    app.get('/user', (req, res) => {
-        console.log('e');
-    })
+    app.post('/user-register', controller.register);
+    app.post('/user-login', controller.login);
 }
